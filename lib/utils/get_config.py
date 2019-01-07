@@ -13,7 +13,7 @@ from easydict import EasyDict
 
 
 # PARSE THE DEFAULT CONFIG
-default_cfg_path = 'SSH/configs/default_config.yml'
+default_cfg_path = osp.join(osp.abspath(osp.join(osp.dirname(__file__), '..', '..')), 'SSH/configs/default_config.yml')
 assert osp.isfile(default_cfg_path), 'The default config is not found in {}!'.format(default_cfg_path)
 with open(default_cfg_path, 'r') as cfg_file:
     cfg = EasyDict(yaml.load(cfg_file))
