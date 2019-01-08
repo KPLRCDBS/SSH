@@ -1,0 +1,5 @@
+*.pyc
+
+# output of 'make'
+lib/utils/bbox.c
+lib/utils/cython_bbox.so
